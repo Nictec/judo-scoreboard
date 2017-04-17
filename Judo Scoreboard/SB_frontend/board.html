@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Judo Scoreboard</title> 
+	<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="board.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<script src="timer.min.js"></script>
+</head>
+<body> 
+
+	<div class="info"><span class="label" id="Mat">Matte 1</span><img src="fullscreen.png" width="30px" height="30px" class="full" onclick="fs()"></img></div>
+	<div class="fighter1">
+		<span class="label">Kämpfer 1</span> 
+		<div class="wazari">
+			<span class="label" style="margin-left:0 !important;">Wazari</span>  
+			<br>
+			<span class="number" id="wari1"></span>
+		</div> 
+		<div class="ippon"> 
+		<span class="label" style="margin-left:0 !important;">Ippon</span>  
+		<br>
+		<span class="number" id="ip1"></span>  
+		</div> 
+		<div class="shido"> 
+			<span class="number" id="shi1"></span>
+		</div>
+	</div> 
+	<div class="fighter2">
+		<span class="label">Kämpfer 2</span> 
+		<div class="wazari">
+			<span class="label" style="margin-left:0 !important;">Wazari</span>  
+			<br>
+			<span class="number" id="wari2"></span>
+		</div> 
+		<div class="ippon"> 
+			<span class="label" style="margin-left:0 !important;">Ippon</span>  
+			<br>
+			<span class="number" id="ip2"></span>  
+		</div> 
+		<div class="shido"> 
+			<span class="number" id="shi2"></span>
+		</div>
+	</div> 
+	<div class="times"></div>
+
+	<!-- scripts --> 
+	<script src="board.js"></script> 
+</body>
+</html>

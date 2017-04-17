@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Judo Controler</title> 
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" type="text/css" href="controller.css"> 
+	<link rel="stylesheet" type="text/css" href="buttons.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+</head>
+<body>
+	<div class="f1"> 
+		<span class="label">Kämpfer 1</span> 
+	 		<div class="controls">
+	 			<div class="ipon">
+	 				<span class="label">Ipon</span> 
+	 				<br> 
+	 				<br>
+	 				<span class="btn-white ip" onclick="ippon1Add()">+</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="disp ippon" id="ipDisp1"></span>   
+	 				<br>  
+	 				<br>
+	 				<span class="btn-white ip" id="down" onclick="ippon1Remove()">-</span>
+	 			</div> 
+
+	 			<div class="wazari">
+	 				<span class="label">Wazari</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-white wari" onclick="wazari1Add()">+</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="disp" id="wazaDisp1"></span>  
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-white wari" onclick="wazari1Remove()">-</span>
+	 			</div> 
+
+	 			<div class="shido">
+	 				<span class="label">Shido</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-shido shi" onclick="shido1Add()">+</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="disp shidisp" id="shiDisp1"></span>
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-shido shi" onclick="shido1Remove()">-</span>
+	 			</div>
+	 		</div>
+	</div> 
+
+	<div class="f2"> 
+	<span class="label">Kämpfer 2</span> 
+		 		<div class="controls">
+	 			<div class="ipon">
+	 				<span class="label">Ipon</span> 
+	 				<br> 
+	 				<br>
+	 				<span class="btn-white ip" onclick="ippon2Add()">+</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="disp ippon" id="ipDisp2"></span>  
+	 				<br>  
+	 				<br>
+	 				<span class="btn-white ip" id="down" onclick="ippon2Remove()">-</span>
+	 			</div> 
+
+	 			<div class="wazari">
+	 				<span class="label">Wazari</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-white wari" onclick="wazari2Add()">+</span> 
+	 				<br> 
+	 				<br>
+	 				<span class="disp" id="wazaDisp2"></span> 
+	 				<br>
+	 				<br> 
+	 				<span class="btn-white wari" onclick="wazari2Remove()">-</span>
+	 			</div> 
+
+	 			<div class="shido">
+	 				<span class="label">Shido</span> 
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-shido shi" onclick="shido2Add()">+</span> 
+	 				<br>
+	 				<br> 
+	 				<span class="disp shidisp" id="shiDisp2"></span>  
+	 				<br> 
+	 				<br> 
+	 				<span class="btn-shido shi" onclick="shido2Remove()">-</span>
+	 			</div>
+	 		</div>
+	</div>  
+
+	<div class="general">  
+		<br>
+		<span class="btn-white resetAll" onclick="resetAll()">Reset gesamt</span>
+	</div>
+
+	<!-- scripts --> 
+	<script src="controller.js"></script>
+</body>
+</html>
