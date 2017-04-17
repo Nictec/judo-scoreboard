@@ -98,9 +98,36 @@
 
 	<div class="general">  
 		<br>
-		<span class="btn-white resetAll" onclick="resetAll()">Reset gesamt</span>
+		<span class="btn-white resetAll" onclick="resetAll()">Reset gesamt</span> 
+		<span class="btn-white toggle" onclick="toggle()">start/stop</span> 
+		<span class="btn-white settings" id="myBtn">Einstellungen</span>
 	</div>
 
+	<!-- modal --> 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    	<p class="label">Kampfzeit:</p> 
+    	<br> 
+    	<span class="btn-white add">2</span> 
+    	<span class="btn-white remove">3</span> 
+    	<span class="btn-white remove">4</span> 
+    	<span class="btn-white remove">5</span>
+    	min
+    	<br>
+    	<br> 
+    	<br> 
+    	<span class="btn-white remove1">6</span> 
+    	<span class="btn-white remove">7</span> 
+    	<span class="btn-white remove">8</span> 
+    	<span class="btn-white remove">9</span> 
+    	min 
+  </div>
+
+</div>
 	<!-- scripts --> 
 	<script src="controller.js"></script>
 </body>

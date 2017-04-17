@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:8000');
+const socket = new WebSocket('ws://192.168.0.106:8000');
 var connected = false;
 //web socket receiver
 socket.addEventListener('open', function (event) { 
