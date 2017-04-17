@@ -97,4 +97,10 @@ socket.addEventListener('open', function (event) {
         if(event.data === 'oase2Rem'){
             oase2Rem()
         }
+        if(event.data === 'matAdd'){
+            matAdd()
+        } 
+        if(event.data === 'matSub'){
+            matSub()
+        }
     })  

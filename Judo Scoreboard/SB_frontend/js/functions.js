@@ -1,11 +1,18 @@
-  //Timer 
+  //Timers
+  var o1 = false 
+  var o2 = false 
+  var tori
+  var gong = new Audio('sounds/Bell.mp3');
+
   $('#runner').runner({ 
     autostart: false,
     countdown: true, 
     milliseconds: false, 
     stopAt: 000000,
     startAt: localStorage.getItem("fightTime") // alternatively you could just write: 60*1000
-}); 
+}).on('runnerFinish', function(eventObject, info){
+  gong.play();
+}) 
   function toggle(){ 
     $('#runner').runner('toggle');
   } 
@@ -18,8 +25,37 @@
     location.reload()
     return localStorage.getItem("fightTime");
   }
+
+function oaseIppon(tori){ 
+  if(tori === 1){
+    var element = document.getElementById('ip1');
+    element.innerHTML ++;
+  }else{
+      var element = document.getElementById('ip2');
+      element.innerHTML ++;
+  }
+}
+
+  $('#okTime').runner({
+    autostart: false, 
+    milliseconds: false, 
+    stopAt: 20000,
+  }).on('runnerFinish', function(eventObject, info){
+      oaseIppon(tori); 
+      gong.play();
+  })
+
+  function startOK(){
+    $('#okTime').runner('start');
+  } 
+
+  function resetOK(){
+     $('#okTime').runner('stop');
+     $('#okTime').runner('reset');
+  }
  //set default values 
- resetAll();
+ resetAll(); 
+ document.getElementById('mat').innerHTML = 1 
  //Dom functions
 
 function wazari1Add(){ 
@@ -82,24 +118,48 @@ function shido2Remove(){
 	element.innerHTML --;
 }
 
+function matAdd(){
+  elm = document.getElementById('mat');
+  elm.innerHTML ++;
+}
+
+function matSub(){
+  elm = document.getElementById('mat');
+  elm.innerHTML --;
+}
+
 function oase1(){
-  var elm = document.getElementById('oase1')
-  elm.classList.remove('hidden');
+  if(!o2){
+    startOK()
+    var elm = document.getElementById('oase1')
+    elm.classList.remove('hidden'); 
+    o1 = true; 
+    tori = 1 
+  }
 } 
 
 function oase2(){
-  var elm = document.getElementById('oase2')
-  elm.classList.remove('hidden');
+  if(!o1){ 
+    startOK()
+    var elm = document.getElementById('oase2')
+    elm.classList.remove('hidden'); 
+    o2 = true
+    tori = 2
+  }
 }
 
-function oase1Rem(){
+function oase1Rem(){ 
+  resetOK()
   var elm = document.getElementById('oase1') 
   elm.classList.add('hidden');
+  o1 = false
 }
 
-function oase2Rem(){
+function oase2Rem(){ 
+  resetOK()
   var elm = document.getElementById('oase2') 
-  elm.classList.add('hidden');
+  elm.classList.add('hidden'); 
+  o2 = false
 }
 
 
@@ -110,8 +170,8 @@ function resetAll(){
  document.getElementById('wari2').innerHTML = 0; 
  document.getElementById('ip2').innerHTML = 0; 
  document.getElementById('shi1').innerHTML = 0; 
- document.getElementById('shi2').innerHTML = 0 
- resetTimer();
+ document.getElementById('shi2').innerHTML = 0; 
+ resetTimer(); 
 }
 
 

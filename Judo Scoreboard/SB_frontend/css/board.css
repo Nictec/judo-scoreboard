@@ -86,13 +86,18 @@ body{
       font-weight: bolder;
      }
 
+     #okTime{
+      font-size:55pt;
+      padding-left:8.5em;
+     }
+
      .Tlabel{
       font-size: 17pt;
      } 
 
      .fighttime{
       padding-top:60px;
-      padding-left:50em;
+      padding-left:55em;
      }
 
      .oase{
