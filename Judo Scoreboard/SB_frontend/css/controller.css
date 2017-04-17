@@ -87,6 +87,11 @@ body{
   margin-left: 24em;
  }
 
+ .oase{
+  margin-top:100px; 
+  margin-left:13em;
+ }
+
   /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -131,4 +136,12 @@ body{
  }
  .remove1{
   margin-left: 5em;
+ }
+
+ .hidden{
+  opacity: 0;
+ }
+
+ .plus{
+  margin-left:10em;
  }
