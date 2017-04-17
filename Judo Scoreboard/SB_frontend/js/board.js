@@ -52,11 +52,49 @@ socket.addEventListener('open', function (event) {
     	} 
     	if(event.data === 'delShi2'){ 
     		shido2Remove()
-    	} 
+    	}
+
+        //global 
     	if(event.data === 'resetAll'){ 
     		resetAll()
     	} 
         if(event.data === 'time.toggle'){
             toggle()
+        }
+        if(event.data === 'SS2'){
+            setTimer(2)
+        } 
+        if(event.data === 'SS3'){
+            setTimer(3) 
+        } 
+        if(event.data === 'SS4'){
+            setTimer(4)
+        } 
+        if(event.data === 'SS5'){
+            setTimer(5)
+        }
+        if(event.data === 'SS6'){
+            setTimer(6)
+        }
+        if(event.data === 'SS7'){
+            setTimer(7)
+        } 
+        if(event.data === 'SS8'){
+            setTimer(8)
+        }
+        if(event.data === 'SS9'){
+            setTimer(9)
+        } 
+        if(event.data === 'oase1'){
+            oase1()
+        } 
+        if(event.data === 'oase2'){
+            oase2()
+        }
+        if(event.data === 'oase1Rem'){
+            oase1Rem()
+        }
+        if(event.data === 'oase2Rem'){
+            oase2Rem()
         }
     })  

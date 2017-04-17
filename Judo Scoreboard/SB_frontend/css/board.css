@@ -82,7 +82,7 @@ body{
      }
 
      #runner{ 
-      font-size: 55pt; 
+      font-size: 65pt; 
       font-weight: bolder;
      }
 
@@ -92,5 +92,20 @@ body{
 
      .fighttime{
       padding-top:60px;
-      padding-left:52em;
+      padding-left:50em;
+     }
+
+     .oase{
+        margin-left:180vh; 
+        position:relative; 
+        width:10px;
+        margin-top:-18vh;
+     }
+
+     .td{
+      margin-left: 50px;
+     } 
+
+     .hidden{
+      display: none;
      }

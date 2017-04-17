@@ -82,6 +82,28 @@ function shido2Remove(){
 	element.innerHTML --;
 }
 
+function oase1(){
+  var elm = document.getElementById('oase1')
+  elm.classList.remove('hidden');
+} 
+
+function oase2(){
+  var elm = document.getElementById('oase2')
+  elm.classList.remove('hidden');
+}
+
+function oase1Rem(){
+  var elm = document.getElementById('oase1') 
+  elm.classList.add('hidden');
+}
+
+function oase2Rem(){
+  var elm = document.getElementById('oase2') 
+  elm.classList.add('hidden');
+}
+
+
+
 function resetAll(){ 
  document.getElementById('wari1').innerHTML = 0; 
  document.getElementById('ip1').innerHTML = 0; 
