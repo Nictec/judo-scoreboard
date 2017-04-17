@@ -1,8 +1,8 @@
 # judo-scoreboard
-###A Judo Scoreboard with seperat controller and Scoreboard. 
+#A Judo Scoreboard with seperat controller and Scoreboard. 
 currently it is only possible to install the scoreboard manually wich is explained in the following lines (Installer is comming soon.)
 
-##installation: 
+#installation: 
 Info: To run this Programm node.js is required. [Download](https://nodejs.org/en/) 
 ``` 
 #Command Line 
