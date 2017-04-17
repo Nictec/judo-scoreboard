@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="board.css"> 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-	<script src="timer.min.js"></script>
 </head>
 <body> 
 
@@ -43,9 +42,17 @@
 			<span class="number" id="shi2"></span>
 		</div>
 	</div> 
-	<div class="times"></div>
+	<div class="times"> 
+		<div class="fighttime"> 
+			<span id="runner"></span>
+		</div>
+		
+	</div>
 
-	<!-- scripts --> 
-	<script src="board.js"></script> 
+	<!-- scripts -->  
+	<script src="js/jquery-3.2.1.min.js"></script> 
+	<script src="js/jquery.runner-min.js"></script> 
+	<script src="js/functions.js"></script>
+	<script src="js/board.js"></script> 
 </body>
 </html>
