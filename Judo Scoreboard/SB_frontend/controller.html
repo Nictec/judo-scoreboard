@@ -49,6 +49,16 @@
 	 				<br> 
 	 				<span class="btn-shido shi" onclick="shido1Remove()">-</span>
 	 			</div>
+
+	 			<div class="oase">
+	 				<span class="btn-white" onclick="oase1()" id="o1">Oase-komi</span> 
+	 				<br>
+	 				<br>
+	 				<img src="images/timedot.png" width="50" height="50" style="margin-left:40px;" class="hidden" id="d1"> 
+	 				<br>
+	 				<br>
+	 				<span class="btn-white" onclick="oase1Rem()" style="margin-left:20px" id="o1R">Reset</span>
+	 			</div>
 	 		</div>
 	</div> 
 
@@ -92,6 +102,16 @@
 	 				<br> 
 	 				<br> 
 	 				<span class="btn-shido shi" onclick="shido2Remove()">-</span>
+	 			</div> 
+
+	 			<div class="oase">
+	 				<span class="btn-white" onclick="oase2()" id="o2">Oase-komi</span> 
+	 				<br> 
+	 				<br>
+	 				<img src="images/timedot.png" width="50" height="50" style="margin-left:40px;" class="hidden" id="d2"> 
+	 				<br>
+	 				<br>
+	 				<span class="btn-white" onclick="oase2Rem()" style="margin-left:20px">Reset</span>
 	 			</div>
 	 		</div>
 	</div>  
@@ -112,19 +132,25 @@
     <span class="close">&times;</span>
     	<p class="label">Kampfzeit:</p> 
     	<br> 
-    	<span class="btn-white add">2</span> 
-    	<span class="btn-white remove">3</span> 
-    	<span class="btn-white remove">4</span> 
-    	<span class="btn-white remove">5</span>
+    	<span class="btn-white add" onclick="setTime2()">2</span> 
+    	<span class="btn-white remove" onclick="setTime3()">3</span> 
+    	<span class="btn-white remove" onclick="setTime4()">4</span> 
+    	<span class="btn-white remove" onclick="setTime5()">5</span>
     	min
     	<br>
     	<br> 
     	<br> 
-    	<span class="btn-white remove1">6</span> 
-    	<span class="btn-white remove">7</span> 
-    	<span class="btn-white remove">8</span> 
-    	<span class="btn-white remove">9</span> 
-    	min 
+    	<span class="btn-white remove1" onclick="setTime6()">6</span> 
+    	<span class="btn-white remove" onclick="setTime7()">7</span> 
+    	<span class="btn-white remove" onclick="setTime8()">8</span> 
+    	<span class="btn-white remove" onclick="setTime9()">9</span> 
+    	min  
+
+    	<div class="Mat">
+    		<p class="label">Mattennummer:</p>
+    		<span class="btn-white plus" onclick="matAdd()">+</span> 
+    		<span class="btn-white" onclick="matSub()">-</span>
+    	</div>
   </div>
 
 </div>
