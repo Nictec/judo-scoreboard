@@ -128,28 +128,44 @@
 	<div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+  <div class="modal-content"> 
+  	<div class="modalHeader"> 
+  	<h1>EasyScore Einstellungen:</h1>
+    <span class="close">&times;</span> 
+    </div>
     	<p class="label">Kampfzeit:</p> 
     	<br> 
-    	<span class="btn-white add" onclick="setTime2()">2</span> 
-    	<span class="btn-white remove" onclick="setTime3()">3</span> 
-    	<span class="btn-white remove" onclick="setTime4()">4</span> 
-    	<span class="btn-white remove" onclick="setTime5()">5</span>
+    	<span id="t2" class="btn-white add" onclick="setTime2()">2</span> 
+    	<span id="t3" class="btn-white remove" onclick="setTime3()">3</span> 
+    	<span id="t4" class="btn-white remove" onclick="setTime4()">4</span> 
+    	<span id="t5" class="btn-white remove" onclick="setTime5()">5</span>
     	min
     	<br>
     	<br> 
     	<br> 
-    	<span class="btn-white remove1" onclick="setTime6()">6</span> 
-    	<span class="btn-white remove" onclick="setTime7()">7</span> 
-    	<span class="btn-white remove" onclick="setTime8()">8</span> 
-    	<span class="btn-white remove" onclick="setTime9()">9</span> 
+    	<span id="t6" class="btn-white remove1" onclick="setTime6()">6</span> 
+    	<span id="t7" class="btn-white remove" onclick="setTime7()">7</span> 
+    	<span id="t8" class="btn-white remove" onclick="setTime8()">8</span> 
+    	<span id="t9" class="btn-white remove" onclick="setTime9()">9</span> 
     	min  
 
     	<div class="Mat">
     		<p class="label">Mattennummer:</p>
     		<span class="btn-white plus" onclick="matAdd()">+</span> 
     		<span class="btn-white" onclick="matSub()">-</span>
+    	</div> 
+
+    	<div class="pauseDislay"> 
+    		<p class="label">Pausendisplay (Bild):</p>
+    		<span class="btn-white on" onclick="logoOn()">ein</span>
+    		<span class="btn-white" onclick="logoOFF()">aus</span>
+    	</div> 
+
+    	<div class="sound">
+    		<p class="label">Zeit sound:</p> 
+    		<span class="btn-white gong" id="bell" onclick="Bell()">Gong</span> 
+    		<span class="btn-white" id="sieben" onclick="siebenhundert()">700Hz Sound</span> 
+    		<span class="btn-white" id="tausend" onclick="tausend()">1000Hz Sound</span>
     	</div>
   </div>
 

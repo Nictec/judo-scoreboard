@@ -1,5 +1,16 @@
 const socket = new WebSocket('ws://192.168.0.106:8000');
-var connected
+var connected 
+var bell = document.getElementById('bell'); 
+var sieben = document.getElementById('sieben'); 
+var thausend = document.getElementById('tausend'); 
+var t2 = document.getElementById('t2')
+var t3 = document.getElementById('t3')
+var t4 = document.getElementById('t4')
+var t5 = document.getElementById('t5')
+var t6 = document.getElementById('t6')
+var t7 = document.getElementById('t7')
+var t8 = document.getElementById('t8') 
+var t9 = document.getElementById('t9')
 socket.addEventListener('open', function (event) {
 	connected = true
 }); 
@@ -9,7 +20,14 @@ socket.addEventListener('close', function (event){
 	alert("connection lost")
 }) 
 
-
+socket.addEventListener('message', function(event){
+	if(event.data === "oaseIppon1"){
+		document.getElementById('ipDisp1').innerHTML++;
+	}
+	if(event.data === "oaseIppon2"){
+		document.getElementById('ipDisp2').innerHTML++;
+	}
+})
 
 
 
@@ -19,7 +37,10 @@ socket.addEventListener('close', function (event){
 	document.getElementById('shiDisp1').innerHTML = 0; 
 	document.getElementById('ipDisp2').innerHTML = 0; 
 	document.getElementById('wazaDisp2').innerHTML = 0; 
-	document.getElementById('shiDisp2').innerHTML = 0;
+	document.getElementById('shiDisp2').innerHTML = 0; 
+	bell.classList.remove('active'); 
+	sieben.classList.add('active') 
+	thausend.classList.remove('active')
 //score functions
 function ippon1Add(){  
 		if(connected){
@@ -174,28 +195,117 @@ function toggle(){
 	socket.send('time.toggle')
 } 
 function setTime2(){
-	socket.send("SS2")
+	socket.send("SS2") 
+	t2.classList.add("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active") 
+	t9.classList.remove("active") 
 }
 function setTime3(){ 
 	socket.send("SS3"); 
+	t2.classList.remove("active") 
+	t3.classList.add("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active") 
+	t9.classList.remove("active") 
 }
 function setTime4(){ 
 	socket.send("SS4"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.add("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active") 
+	t9.classList.remove("active")  
 } 
 function setTime5(){ 
 	socket.send("SS5"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.add("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active") 
+	t9.classList.remove("active") 
 } 
 function setTime6(){ 
 	socket.send("SS6"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.add("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active") 
+	t9.classList.remove("active")  
 } 
 function setTime7(){ 
 	socket.send("SS7"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.add("active") 
+	t8.classList.remove("active")
+	t9.classList.remove("active")  
 } 
 function setTime8(){ 
 	socket.send("SS8"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.add("active")
+	t9.classList.remove("active") 
 } 
 function setTime9(){ 
 	socket.send("SS9"); 
+	socket.send("SS8"); 
+	t2.classList.remove("active") 
+	t3.classList.remove("active") 
+	t4.classList.remove("active") 
+	t5.classList.remove("active") 
+	t6.classList.remove("active") 
+	t7.classList.remove("active") 
+	t8.classList.remove("active")
+	t9.classList.add("active")  
+} 
+function logoOn(){
+	socket.send("logoON")
+}
+function logoOFF(){
+	socket.send("logoOFF")
+} 
+function Bell(){
+	socket.send('SoundBell') 
+	bell.classList.add('active'); 
+	sieben.classList.remove('active') 
+	thausend.classList.remove('active')
+}
+function siebenhundert(){
+	socket.send('SoundSeven') 
+	bell.classList.remove('active'); 
+	sieben.classList.add('active') 
+	thausend.classList.remove('active')
+}
+function tausend(){
+	socket.send('SoundTausend') 
+	bell.classList.remove('active'); 
+	sieben.classList.remove('active') 
+	thausend.classList.add('active')
 }
 
 
