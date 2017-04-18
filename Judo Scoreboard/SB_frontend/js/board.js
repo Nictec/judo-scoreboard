@@ -1,10 +1,3 @@
-const socket = new WebSocket('ws://localhost:8000');
-var connected = false;
-//web socket receiver
-socket.addEventListener('open', function (event) { 
-	connected = true;
-});
-
  socket.addEventListener('message', function(event){ 
     	if(event.data === 'ip1'){ 
     		ippon1Add(); 
@@ -102,5 +95,20 @@ socket.addEventListener('open', function (event) {
         } 
         if(event.data === 'matSub'){
             matSub()
+        } 
+        if(event.data === 'logoON'){
+            open() 
+        } 
+        if(event.data === 'logoOFF'){
+            close()
+        } 
+        if(event.data === 'SoundBell'){
+            setSound('Bell.mp3')
+        } 
+        if(event.data === 'SoundSeven'){
+            setSound('700Hz.wav')
+        } 
+        if(event.data === 'SoundTausend'){
+            setSound('1000Hz.wav')
         }
     })  

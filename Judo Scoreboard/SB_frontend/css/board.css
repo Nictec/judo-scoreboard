@@ -38,12 +38,12 @@ body{
   } 
 
  .label{ 
- 	font-size: 30pt; 
+ 	font-size: 40pt; 
  	margin-left:0.5em;
   } 
 
   .number{ 
-  	font-size: 60pt; 
+  	font-size: 150pt; 
   	margin-left: 15px;
    }
 
@@ -51,23 +51,31 @@ body{
   	margin-left:110vh;  
   	position:relative; 
   	width:10px;
-  	margin-top:1vh;
+  	margin-top:-4vh;
    } 
 
    .ippon{  
    		position:relative;
-   		margin-top:-16vh; 
+   		margin-top:-34vh; 
    		margin-left:50vh;
     } 
 
     .shido{ 
     	position:relative;
-   		margin-top:-80px; 
+   		margin-top:-270px; 
    		margin-left:150vh; 
    		background-color: #ffff00; 
    		color:#ff0000; 
    		border: solid 2px;
-   		width:75px;
+   		width:115px;
+   } 
+
+   #shi1{
+    margin-left:2px !important;
+   }  
+
+   #shi2{
+    margin-left:2px !important;
    }  
 
    .full{ 
@@ -82,13 +90,13 @@ body{
      }
 
      #runner{ 
-      font-size: 65pt; 
+      font-size: 85pt; 
       font-weight: bolder;
      }
 
      #okTime{
       font-size:55pt;
-      padding-left:8.5em;
+      padding-left:8em;
      }
 
      .Tlabel{
@@ -97,20 +105,87 @@ body{
 
      .fighttime{
       padding-top:60px;
-      padding-left:55em;
+      padding-left:50em;
      }
 
      .oase{
         margin-left:180vh; 
         position:relative; 
         width:10px;
-        margin-top:-18vh;
+        margin-top:-30vh;
      }
 
      .td{
-      margin-left: 50px;
+      margin-left: 60px; 
+      margin-top: -3em;
      } 
 
      .hidden{
       display: none;
-     }
+     } 
+
+     /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; /* Could be more or less, depending on screen size */ 
+    height: 100%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.add{ 
+  margin-left: 5em;
+ }
+ .remove1{
+  margin-left: 5em;
+ } 
+
+ .image{
+  margin-left:40em; 
+ } 
+
+ .matid{
+  margin-top:1em;
+ } 
+
+ .mid{
+  font-size: 60pt;
+ }
+
+ .fullscreen{
+  margin-top:5em;
+ }
+
+ .appname{
+  margin-top: -1em;
+ }

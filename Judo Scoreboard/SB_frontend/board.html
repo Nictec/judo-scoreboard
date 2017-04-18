@@ -9,7 +9,7 @@
 </head>
 <body> 
 
-	<div class="info"><span class="label">Matte <span id="mat"></span></span><img src="images/fullscreen.png" width="30px" height="30px" class="full" onclick="fs()"></img></div>
+	<div class="info"><span class="label">Matte <span id="mat"></span></span><!-- <img src="images/fullscreen.png" width="30px" height="30px" class="full" onclick="fs()"></img> --></div>
 	<div class="fighter1">
 		<span class="label">Kämpfer 1</span> 
 		<div class="wazari">
@@ -27,7 +27,7 @@
 		</div> 
 		<div class="oase">
 			<span class="label" style="margin-left:0 !important;">Oase-komi</span> 
-			<span id="oase1" class="number td hidden"><img src="images/timedot.png" width="100" height="100"></span>  
+			<span id="oase1" class="number td hidden"><img src="images/timedot.png" width="170" height="170"></span>  
 		</div>
 	</div> 
 	<div class="fighter2">
@@ -47,7 +47,7 @@
 		</div>
 		<div class="oase">
 			<span class="label" style="margin-left:0 !important;">Oase-komi</span> 
-			<span id="oase2" class="number td hidden"><img src="images/timedot.png" width="100" height="100"></span>  
+			<span id="oase2" class="number td hidden"><img src="images/timedot.png" width="170" height="170"></span>  
 		</div>
 	</div> 
 	<div class="times"> 
@@ -56,9 +56,24 @@
 			<span id="okTime"></span>
 		</div>
 		
-	</div>
+	</div> 
+
+
+	<!-- modal --> 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  	<img src="images/judo.jpg" height="600" class="image" id="pImage"> 
+  	<h1 class="mid" id="matid">Matte <span id="matt"></span></h1> 
+  	<h1 class="appname">EasyScore</h1>
+  </div>
+
+</div>
 
 	<!-- scripts -->  
+	<script src="js/websocket.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script> 
 	<script src="js/jquery.runner-min.js"></script> 
 	<script src="js/functions.js"></script>
